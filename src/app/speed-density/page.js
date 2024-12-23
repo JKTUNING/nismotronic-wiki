@@ -5,9 +5,14 @@ import sa_iat from '@public/sd/sa_iat.jpg'
 import sa_mafdisable from '@public/sd/sa_mafdisable.jpg'
 import sa_overboost from '@public/sd/sa_overboost.jpg'
 
-export default function Home() {
+export const metadata = {
+  title: 'Speed Density Conversion',
+  description: 'NismoTronic gives the user the ability to run the car is Speed Density mode, which uses a MAP and IAT sensor in place of the normal MAF sensor.'
+}
+
+export default function SpeedDensity() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='w-full text-center text-4xl font-bold'>Speed Density Conversion</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <p>NismoTronic gives the user the ability to run the car is Speed Density mode, which uses a MAP and IAT sensor in place of the normal MAF sensor.</p>
@@ -72,19 +77,19 @@ export default function Home() {
         <p>Setting up a calibration to be used for Speed Density operation is a little different than the normal setup for a MAF calibration.</p>
         <ol className='list-decimal space-y-2 pl-6'>
           <li>Select your load source</li>
-          <Image src={sa_load} alt='Select your load source' />
+          <Image className='w-full sm:w-3/4 lg:w-2/3' src={sa_load} alt='Select your load source' />
           <li>Select and Enable your MAP sensor</li>
-          <Image src={sa_map} alt='Select and Enable your MAP sensor' />
+          <Image className='w-full sm:w-3/4 lg:w-2/3' src={sa_map} alt='Select and Enable your MAP sensor' />
           <li>Select and Enable your IAT sensor</li>
-          <Image src={sa_iat} alt='Select and Enable your IAT sensor' />
+          <Image className='w-full sm:w-3/4 lg:w-2/3' src={sa_iat} alt='Select and Enable your IAT sensor' />
           <li>
             <span className='font-bold'>DISABLE THE MAF SENSOR</span>
           </li>
-          <Image src={sa_mafdisable} alt='Disable the MAF sensor' />
+          <Image className='w-full sm:w-3/4 lg:w-2/3' src={sa_mafdisable} alt='Disable the MAF sensor' />
           <li>
             Setup overboost tables (<span className='font-bold'>even if naturally aspirated</span>)
           </li>
-          <Image src={sa_overboost} alt='Setup overboost tables' />
+          <Image className='w-full sm:w-3/4 lg:w-2/3' src={sa_overboost} alt='Setup overboost tables' />
         </ol>
       </div>
     </div>

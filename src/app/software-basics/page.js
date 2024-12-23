@@ -1,8 +1,13 @@
 import CompareTool from './components/CompareTool'
 
-export default function Home() {
+export const metadata = {
+  title: 'Software Basics',
+  description: 'Covers the basics of the software, including quick keys, working with the MAF window, loading a TCD, working with the primary maps, working with the parameter tables, logging settings, and misc settings.'
+}
+
+export default function SoftwareBasics() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='w-full text-center text-4xl font-bold'>Software Basics</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='text-xl font-bold'>Quick Keys</h2>

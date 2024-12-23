@@ -1,6 +1,11 @@
-export default function Page() {
+export const metadata = {
+  title: 'Demo Videos',
+  description: 'Demo videos showing how to use the software.'
+}
+
+export default function Demos() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='w-full text-center text-4xl font-bold'>Demo Videos</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-10 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <div className='aspect-video w-full shadow-lg shadow-primary/20'>

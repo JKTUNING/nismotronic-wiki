@@ -7,9 +7,14 @@ import OBD1 from '@public/adc/OBD1.jpg'
 import ADC_IAT_JUMPER from '@public/adc/ADC_IAT_JUMPER.jpg'
 import MAP_INSTALL from '@public/adc/MAP_INSTALL.jpg'
 
-export default function Home() {
+export const metadata = {
+  title: 'ADC Box Overview',
+  description: 'Covers how to use the ADC box, how to wire a MAP sensor to the ADC box, how to wire an IAT sensor to the ADC box, and how to wire a wideband to the ADC box.'
+}
+
+export default function ADCOverview() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='w-full text-center text-4xl font-bold'>ADC Box Overview</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Top of ADC v2 board</h2>
@@ -21,7 +26,7 @@ export default function Home() {
           <li>12Vin - Supply pin with 12V which will be for reference power for the 5Vout</li>
         </ul>
 
-        <Image className='w-3/4' src={ADCv2_top} alt='ADC v2 top' />
+        <Image className='w-full lg:w-3/4' src={ADCv2_top} alt='ADC v2 top' />
       </div>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Bottom of ADC v2 board</h2>
@@ -29,7 +34,7 @@ export default function Home() {
           <li>4 sets of solder pads in the bottom center of the board can be jumped for a 4.7k ohm pull up resistor for each ADC0-3 circuit. </li>
           <li className='font-bold'>Only use when needed (IAT installs are the most common use for this option)</li>
         </ul>
-        <Image className='w-3/4' src={ADCv2_jumper} alt='ADC v2 jumper' />
+        <Image className='w-full lg:w-3/4' src={ADCv2_jumper} alt='ADC v2 jumper' />
       </div>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Wiring MAP sensor to ADC input</h2>
@@ -42,7 +47,7 @@ export default function Home() {
           <li>ADC - INPUT from MAP SENSOR SIGNAL - Receives signal from MAP.</li>
           <li>GND - Additional ground terminal to be used to ground the map sensor.</li>
         </ul>
-        <Image className='w-3/4' src={MAP_INSTALL} alt='MAP install' />
+        <Image className='w-full lg:w-3/4' src={MAP_INSTALL} alt='MAP install' />
       </div>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Wiring IAT sensor to ADC input</h2>
@@ -55,10 +60,10 @@ export default function Home() {
           <li>Wire ADC 12v input to ECU power source (pin 38)</li>
           <li>Wire ADC Ground input to ECU ground source (pin 39)</li>
 
-          <Image className='w-3/4' src={OBD1} alt='OBD1' />
+          <Image className='w-full lg:w-3/4' src={OBD1} alt='OBD1' />
           <li>Flip over ADC box and make sure to solder two solder pads together on the corresponding ADC input you would like to use for the IAT input.</li>
 
-          <Image className='w-3/4' src={ADC_IAT_JUMPER} alt='ADC IAT Jumper' />
+          <Image className='w-full lg:w-3/4' src={ADC_IAT_JUMPER} alt='ADC IAT Jumper' />
 
           <li>Connect 1 wire from IAT sensor to the ADC (0-3) input pin that corresponds to the jumper you just soldered together.</li>
           <li>Connect remaining wire from IAT sensor to ADC Ground pin</li>
@@ -79,7 +84,7 @@ export default function Home() {
 
         <p>Find your wideband&apos;s 0-5 volt output wire and connect it directly to any of the ADC 0-3 inputs on the breakout board.</p>
 
-        <Image className='w-3/4' src={ADCtop} alt='ADC top' />
+        <Image className='w-full lg:w-3/4' src={ADCtop} alt='ADC top' />
 
         <p>Then select the wideband in the drop down list and enable it in the software.</p>
 
@@ -96,7 +101,7 @@ export default function Home() {
         </ul>
         The diode is required if the switch is already wired to a 12V source, such as the E-brake warning light switch. The 5V going to the 10k ohm resistor is from the 5V output in the breakout box.
         <p>Vdc0 = 5 volt output from the ADC box.</p>
-        <Image className='w-3/4' src={switched_ADCinput} alt='switched ADC input' />
+        <Image className='w-full lg:w-3/4' src={switched_ADCinput} alt='switched ADC input' />
       </div>
     </div>
   )

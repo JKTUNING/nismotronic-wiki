@@ -15,4 +15,3 @@ npm run dev
 This project is deployed on Flux using a docker container.
 
 https://nismotronicwiki.app.runonflux.io/
-

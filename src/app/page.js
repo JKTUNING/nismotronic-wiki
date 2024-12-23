@@ -3,7 +3,7 @@ import { Calendar, Inbox, Gauge, ChartArea, Atom, Video, Fan } from 'lucide-reac
 
 export default function HomePage() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='text-center text-4xl font-bold'>NismoTronic Wiki</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 p-4'>
         <p>Welcome to the NismoTronic Wiki!</p>

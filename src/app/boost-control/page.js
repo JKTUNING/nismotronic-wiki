@@ -3,9 +3,14 @@ import external_wg_setup from '@public/boost-control/bc-external.jpg'
 import internal_wg_setup from '@public/boost-control/bc-internal.jpg'
 import boost_solenoid_wiring from '@public/adc/OBD1.jpg'
 
-export default function Home() {
+export const metadata = {
+  title: 'Boost Control',
+  description: 'Covers how to install a 3-port boost control solenoid for use with your NismoTronicSA ECU.'
+}
+
+export default function BoostControl() {
   return (
-    <div className='w-full gap-4 p-4'>
+    <div className='w-full gap-4 py-4 pl-7 pr-4 xl:pl-4'>
       <h1 className='w-full text-center text-4xl font-bold'>Boost Control</h1>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <p>This document explains how to install a 3-port boost control solenoid for use with your NismoTronicSA ECU.</p>
@@ -22,11 +27,11 @@ export default function Home() {
         <h2 className='w-full text-2xl font-bold'>External WG Setup</h2>
         <p>This section covers the installation of a 3-port boost control solenoid on an external WG.</p>
         <ul className='list-disc space-y-2 pl-6'>
-          <li>Port 1 - Boost source from the intake manifold OR turbo is T’d into the BOTTOM port of the WG</li>
+          <li>Port 1 - Boost source from the intake manifold OR turbo is T&apos;d into the BOTTOM port of the WG</li>
           <li>Port 2 - Connect Directly to the TOP port of the WG</li>
           <li>Port 3 - OPEN FILTER</li>
         </ul>
-        <Image className='w-3/4' src={external_wg_setup} alt='External WG Setup' />
+        <Image className='w-full lg:w-3/4' src={external_wg_setup} alt='External WG Setup' />
       </div>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Internal WG Setup</h2>
@@ -36,7 +41,7 @@ export default function Home() {
           <li>Port 2 - Directly to Internal WG nipple</li>
           <li>Port 3 - Boost Source from intake manifold or turbo</li>
         </ul>
-        <Image className='w-3/4' src={internal_wg_setup} alt='Internal WG Setup' />
+        <Image className='w-full lg:w-3/4' src={internal_wg_setup} alt='Internal WG Setup' />
       </div>
       <div className='m-10 mx-auto flex max-w-screen-lg flex-col gap-4 rounded-md border border-gray-300 p-4 shadow-lg shadow-primary/20'>
         <h2 className='w-full text-2xl font-bold'>Boost Solenoid Wiring</h2>
@@ -47,7 +52,7 @@ export default function Home() {
         <p>
           If you are using a <span className='font-bold'>FWD SR20DET ECU (GTiR)</span>; then connect the PWM output wire to the stock WG solenoid output on pin <span className='font-bold text-blue-500'>111</span>.
         </p>
-        <Image className='w-3/4' src={boost_solenoid_wiring} alt='Boost Solenoid Wiring' />
+        <Image className='w-full lg:w-3/4' src={boost_solenoid_wiring} alt='Boost Solenoid Wiring' />
       </div>
     </div>
   )
